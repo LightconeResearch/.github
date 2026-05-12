@@ -29,15 +29,13 @@ All participants are expected to follow our **[Code of Conduct](CODE_OF_CONDUCT.
 ### Submitting Pull Requests
 
 - **Fork the repository**: Create a fork and work on your changes in a dedicated branch and make sure your work is based of of `main`.
-- **Follow project conventions**: Adhere to the coding style, testing, and documentation standards of the project.
 - **Write tests**: Add or update tests to cover your changes.
 - **Update documentation**: Ensure all relevant documentation is up-to-date.
-- **Keep commits atomic**: Each commit should represent a single logical change.
-- **Reference issues**: Use keywords like `closes #123` or `fixes #456` to link your PR to the relevant issue.
+- **Keep commits atomic**: Each commit should represent a single logical change to facilitate review process.
 - **Use draft until ready**: Please convert a PR to draft until it is ready. It will avoid triggering all the CI elements.
+- **Reference issues**: Use keywords like `closes #123` or `fixes #456` to link your PR to the relevant issue.
 
-**Review Process**: A core team member of the project will review your PR or issue. They may request changes, which is normal and
-collaborative.
+**Review Process**: project maintainers will review PRs and issues on a best effort basis, and will engage with the authors to potentially request changes, as part of the collaborative work. Not all PRs will eventually be merged.
 
 ---
 
