@@ -6,13 +6,13 @@ This document provides **general guidelines** for contributing to any repository
 
 ---
 
-## 📌 Code of Conduct
+## Code of Conduct
 
 All participants are expected to follow our **[Code of Conduct](CODE_OF_CONDUCT.md)**. By participating, you agree to uphold this code. Please report unacceptable behavior to [lhparker@berkeley.edu](mailto:lhparker@berkeley.edu) or [francois.lanusse@cnrs.fr](mailto:francois.lanusse@cnrs.fr).
 
 ---
 
-## 🤔 How Can I Contribute?
+## How Can I Contribute?
 
 ### Reporting Bugs
 
@@ -39,7 +39,7 @@ All participants are expected to follow our **[Code of Conduct](CODE_OF_CONDUCT.
 
 ---
 
-## ✍🏼️ DCO Sign-Off of Pull Requests
+## DCO Sign-Off of Pull Requests
 
 All contributions require a [Developer Certificate of Origin](https://developercertificate.org/) sign-off.
 This certifies that you have the right to submit the code under the project's BSD-3 or Apache2.0 license.
