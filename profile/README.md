@@ -34,11 +34,11 @@ The `lc` command line, plus a Claude Code plugin (skills, agents, hooks) that tu
 uv tool install lightcone-cli
 lc init my-analysis && cd my-analysis
 claude
-# Inside Claude Code start scoping a research question with
+# then inside Claude Code start scoping a research question with
 /lc-new
 ```
 
-The [user guide](docs.lightconeresearch.org) walks you from there to your first reproducible result.
+The [user guide](https://docs.lightconeresearch.org) walks you from there to your first reproducible result.
 
 ## Some core ideas
 
