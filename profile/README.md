@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://lightconeresearch.org/img/logo-primary.svg" alt="Lightcone logo and wordmark" height="200">
+  <img src="https://lightconeresearch.org/img/logo-primary.svg" alt="Lightcone logo and wordmark" height="200" style="max-width: 100%">
 </div>
 
 <p align="center">
