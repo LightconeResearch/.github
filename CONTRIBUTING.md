@@ -16,15 +16,13 @@ All participants are expected to follow our **[Code of Conduct](CODE_OF_CONDUCT.
 
 ### Reporting Bugs
 
-- **Check existing issues**: Search the repository’s [Issues](https://github.com/your-org/your-repo/issues) to ensure the bug hasn’t already been reported.
-- **Provide a clear description**: Include steps to reproduce, expected vs. actual behavior, and any relevant logs or screenshots.
-- **Use templates**: If the repository provides a bug report template, use it to structure your issue.
+- **Check existing issues**: Search the repository’s issues to ensure the bug hasn’t already been reported.
+- **Use templates**: The repositories provide a bug report and documentation update templates. Use them to structure your issue report.
 
 ### Suggesting Enhancements
 
-- Open an issue with a clear title and detailed description.
-- Explain the use case, the problem it solves, and any alternatives you’ve considered.
-- Include examples, mockups, or references to similar features in other projects.
+- **Use the template**: We provide a feature request template, explain the use case, the problem it solves, and any alternatives you’ve considered.
+- **Tips for a better proposal**: Include examples, mockups, or references to similar features in other projects.
 
 ### Submitting Pull Requests
 
@@ -42,7 +40,7 @@ All participants are expected to follow our **[Code of Conduct](CODE_OF_CONDUCT.
 ## DCO Sign-Off of Pull Requests
 
 All contributions require a [Developer Certificate of Origin](https://developercertificate.org/) sign-off.
-This certifies that you have the right to submit the code under the project's BSD-3 or Apache2.0 license.
+This certifies that you have the right to submit the code under the BSD 3-Clause license.
 
 Sign-off happens at the **pull request level**, not per-commit. Here's how it works:
 
