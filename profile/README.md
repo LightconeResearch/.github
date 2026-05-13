@@ -36,15 +36,10 @@ A specification language and validator for analyses. One `astra.yaml` declares y
 
 The `lc` command line, plus a Claude Code plugin (skills, agents, hooks) that turns an `astra.yaml` into materialized results. Recipes run through Snakemake on a Dask cluster — local laptop, SLURM allocation, or external scheduler. Every output gets a content-addressed manifest so `lc verify` can prove what you have on disk is what was actually computed.
 
-### [lightcone-ui](https://github.com/LightconeResearch/lightcone-ui) &nbsp;·&nbsp; *Visualization layer*
+## Try it in a couple lines
 
-A visual layer for narrative browsing of analyses and sub-analyses, and reading the evidence trail behind each decision. Provides both a web-based and a VSCode-based UI.
-
-## Try it in five lines
-
-```bash
-uv install lightcone-cli                # or: uv tool install lightcone-cli
-lc setup
+```text
+uv tool install lightcone-cli
 lc init my-analysis && cd my-analysis
 claude                                   # opens Claude Code
 # Inside Claude Code:
@@ -59,13 +54,14 @@ The [user guide](docs.lightconeresearch.org) walks you from there to your first 
 - **Decisions, not defaults.** Every meaningful methodological choice is a named decision with options, a default, a rationale, and (where possible) literature evidence behind it.
 - **Universes for free.** A *universe* is one specific selection of decision values. Sweep them to compare alternative defensible analyses side by side.
 - **Provenance you can prove.** Every materialized output ships with a sidecar manifest recording the recipe, the container image, the decisions, the input chain, and content hashes. Tampering and drift are detectable, not hopeful.
-- **Agents do the typing, you do the science.** The Claude Code plugin (`/lc-new`, `/lc-build`, `/lc-verify`, `/lc-migrate`, `/lc-feedback`) handles the implementation grind so researchers can stay on the questions that matter.
+- **Agents do the typing, you do the science.** The Claude Code plugin (`/lc-new`, `/lc-migrate`, `/lc-feedback`) handles the implementation grind so researchers can stay on the questions that matter.
 
 ## Talk to us
 
-- 🐛 **Found a bug?** Inside any Claude Code session, run `/lc-feedback <what went wrong>` and we get a clean issue with the context auto-attached.
-<!-- - 💬 **Want to chat?** Open a discussion on [lightcone-cli](https://github.com/LightconeResearch/lightcone-cli/discussions) or [ASTRA](https://github.com/LightconeResearch/ASTRA/discussions). -->
-- 📖 **Looking for the deeper docs?** Maintainer documentation lives alongside each repo (`docs/`).
+- 🐛 **Found a bug?**
+  - Write an issue report using our provided templates.
+  - Inside any Claude Code session, run `/lc-feedback <what went wrong>` and we get a clean issue with the context auto-attached.
+- 📖 **Looking for the deeper docs?** Maintainer documentation lives inside the [main docs](https://docs.lightconeresearch.org) or in (`docs/`).
 
 ## Contributing
 
