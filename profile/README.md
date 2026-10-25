@@ -35,8 +35,8 @@ We build open tools that make those choices explicit and keep the record for you
 
    The Lightcone plugin then installs the Lightcone CLI it needs on first use.
 
-   > [!WARNING]
-   > You may need to reload the plugins (or restart your agent) before they work.
+> [!WARNING]
+> You may need to reload the plugins (or restart your agent) before they work.
 
 Then start your agent in an empty directory and give it your research question:
 
