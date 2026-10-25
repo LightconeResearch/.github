@@ -35,10 +35,10 @@
 Then start your agent in an empty directory and give it your research question:
 
 ```text
-/lightcone:lightcone I want to start a new analysis: <your research question>
+I want to start a new Lightcone analysis: <your research question>
 ```
 
-(`$lightcone:lightcone …` in Codex.) The agent works through the plan with you, records every decision in an `astra.yaml`, then runs the analysis with full provenance.
+The words "new analysis" are enough for your agent to pick up the Lightcone skill. It works through the plan with you, records every decision in an `astra.yaml`, then runs the analysis with full provenance.
 
 👉 **[Follow the full quick start](https://docs.lightconeresearch.org/quickstart)** for the next steps, including exploring your project in JupyterLab.
 
