@@ -18,6 +18,12 @@
 
 ---
 
+## What we work on
+
+Computational research is full of methodological choices that quietly shape the results: how a dataset is filtered, how a model is parameterized, what cutoff defines an outlier. These choices are often defensible, often debatable, and almost always invisible by the time the paper is written.
+
+We build open tools that make those choices explicit and keep the record for you: your AI agent plans the analysis with you, records each decision with the evidence behind it, and every result comes from a recorded run you can trace back and reproduce months later.
+
 ## Quick start
 
 1. Install [`uv`](https://docs.astral.sh/uv/getting-started/installation/), version **0.12 or later** (check with `uv --version`).
@@ -42,12 +48,6 @@ The words "new analysis" are enough for your agent to pick up the Lightcone skil
 
 👉 **[Follow the full quick start](https://docs.lightconeresearch.org/quickstart)** for the next steps, including exploring your project in JupyterLab.
 
-## What we work on
-
-Computational research is full of methodological choices that quietly shape the results: how a dataset is filtered, how a model is parameterized, what cutoff defines an outlier. These choices are often defensible, often debatable, and almost always invisible by the time the paper is written.
-
-We build open tools that make those choices explicit and keep the record for you: your AI agent plans the analysis with you, records each decision with the evidence behind it, and every result comes from a recorded run you can trace back and reproduce months later.
-
 ## Our projects
 
 All projects are in early alpha: expect breaking changes, and please tell us what breaks.
@@ -67,12 +67,9 @@ All projects are in early alpha: expect breaking changes, and please tell us wha
 - **Provenance you can prove.** Every output is committed together with a content-addressed manifest and a re-runnable run record. Tampering and drift are detectable, not hopeful.
 - **Agents do the typing, you do the science.** The agent handles the implementation grind; you make the scientific choices.
 
-## Get in touch
+## Community
 
-Questions, ideas, or want to try the stack on your own research? Come talk to us on **[Discord](https://discord.gg/EbG6JKuyAx)**.
-
-## Contributing
-
+- **Questions, ideas, or want to try the stack on your own research?** Come talk to us on **[Discord](https://discord.gg/EbG6JKuyAx)**.
 - **Found a bug?** Two ways to report it:
   - Open an issue using our templates.
   - From your agent session, install the [Lightcone Feedback](https://github.com/LightconeResearch/feedback) plugin and ask: *"Use Lightcone Feedback to report this: …"*. It drafts the issue for your approval and routes it to the right repository.
