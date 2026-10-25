@@ -29,6 +29,9 @@
 
    The Lightcone plugin then installs the Lightcone CLI it needs on first use.
 
+   > [!WARNING]
+   > You may need to reload the plugins (or restart your agent) before they work.
+
 Then start your agent in an empty directory and give it your research question:
 
 ```text
