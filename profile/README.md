@@ -5,9 +5,15 @@
 <p align="center">
   <em>Tools for transparent, reproducible and verifiable science.</em>
 </p>
+
 <p align="center">
-  <a href="https://lightconeresearch.org">lightconeresearch.org</a> ·
-  <a href="https://docs.lightconeresearch.org">documentation</a>
+  <a href="https://docs.lightconeresearch.org"><img src="https://img.shields.io/badge/Documentation-docs.lightconeresearch.org-334155?style=for-the-badge" alt="Documentation"></a>
+  <a href="https://docs.lightconeresearch.org/quickstart"><img src="https://img.shields.io/badge/Quick_start-get_started-426b78?style=for-the-badge" alt="Quick start"></a>
+  <a href="https://discord.gg/EbG6JKuyAx"><img src="https://img.shields.io/badge/Discord-join_us-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord"></a>
+</p>
+
+<p align="center">
+  <a href="https://lightconeresearch.org">lightconeresearch.org</a>
 </p>
 
 ---
@@ -16,45 +22,64 @@
 
 Computational research is full of methodological choices that quietly shape the results: how a dataset is filtered, how a model is parameterized, what cutoff defines an outlier. These choices are often defensible, often debatable, and almost always invisible by the time the paper is written.
 
-We build tools that surface those choices, make them explicit, and let researchers explore the alternatives systematically — all the way from a research question down to materialized, integrity-checked results. Most of that machinery is driven by AI agents now, so a researcher can stay focused on the science instead of the plumbing.
+We build open tools that make those choices explicit and keep the record for you: your AI agent plans the analysis with you, records each decision with the evidence behind it, and every result comes from a recorded run you can trace back and reproduce months later.
+
+## Quick start
+
+1. Install [`uv`](https://docs.astral.sh/uv/getting-started/installation/), version **0.12 or later** (check with `uv --version`).
+2. Add the Lightcone plugin to your coding agent. It installs the Lightcone CLI it needs on first use.
+
+   **Claude Code**
+
+   ```bash
+   claude plugin marketplace add LightconeResearch/agent-skills
+   claude plugin install lightcone@lightcone-research
+   ```
+
+   **Codex** (approve the plugin's hooks when Codex asks: they are how the plugin checks the agent's work)
+
+   ```bash
+   codex plugin marketplace add LightconeResearch/agent-skills
+   codex plugin add lightcone@lightcone-research
+   ```
+
+   For the desktop apps, see the [agent-skills instructions](https://github.com/LightconeResearch/agent-skills#-add-the-marketplace).
+
+Then start your agent in an empty directory and give it your research question:
+
+```text
+I want to start a new Lightcone analysis: <your research question>
+```
+
+The words "new Lightcone analysis" are enough for your agent to pick up the Lightcone plugin. It works through the plan with you, records every decision in an `astra.yaml`, then runs the analysis with full provenance.
+
+👉 **[Follow the full quick start](https://docs.lightconeresearch.org/quickstart)** for the next steps.
 
 ## Our projects
 
-### [ASTRA](https://github.com/LightconeResearch/ASTRA) &nbsp;·&nbsp; *Agentic Schema for Transparent Research Analysis*
+These projects are in early alpha and evolve quickly: interfaces may change between releases. Bug reports and feedback are very welcome.
 
-A specification language and validator for analyses. One `astra.yaml` declares your inputs, outputs, methodological **decisions**, and the **prior insights** from the literature that justify each option. Includes the `astra` CLI, machine-verified evidence quotes, and the schema everything else builds on.
-
-### [lightcone-cli](https://github.com/LightconeResearch/lightcone-cli) &nbsp;·&nbsp; *Agentic execution layer*
-
-The `lc` command line, plus a Claude Code plugin (skills, agents, hooks) that turns an `astra.yaml` into materialized results. Recipes run through Snakemake on a Dask cluster — local laptop, SLURM allocation, or external scheduler. Every output gets a content-addressed manifest so `lc verify` can prove what you have on disk is what was actually computed.
-
-## Try it in a couple lines
-
-```bash
-uv tool install lightcone-cli
-lc init my-analysis && cd my-analysis
-claude
-# then inside Claude Code start scoping a research question with
-/lc-new
-```
-
-The [user guide](https://docs.lightconeresearch.org) walks you from there to your first reproducible result.
+| | Project | What it does |
+|---|---|---|
+| **Specification** | [astra-spec](https://github.com/LightconeResearch/astra-spec), [astra-tools](https://github.com/LightconeResearch/astra-tools) | ASTRA (*Agentic Schema for Transparent Research Analysis*), a declarative YAML format for an analysis's inputs, outputs, decisions and evidence, plus the `astra` CLI to validate it. Docs at [astra-spec.org](https://astra-spec.org). |
+| **Workflow** | [lightcone-cli](https://github.com/LightconeResearch/lightcone-cli) | The `lc` execution layer: turns an `astra.yaml` into results across every universe of decisions, in locked environments, locally or on Slurm, with a provenance record for every output. |
+| **Agentic** | [agent-skills](https://github.com/LightconeResearch/agent-skills) | Plugins that teach Claude Code, Codex and other agents the Lightcone stack, following the open [Agent Skills](https://agentskills.io) standard. |
 
 ## Some core ideas
 
-- **One spec, one truth.** `astra.yaml` is the single source of truth. Every input, output, recipe, and decision lives there.
-- **Decisions, not defaults.** Every meaningful methodological choice is a named decision with options, a default, a rationale, and (where possible) literature evidence behind it.
-- **Provenance you can prove.** Every materialized output ships with a sidecar manifest recording the recipe, the container image, the decisions, the input chain, and content hashes. Tampering and drift are detectable, not hopeful.
-- **Agents do the typing, you do the science.** The Claude Code plugin (`/lc-new`, `/lc-migrate`, `/lc-feedback`) handles the implementation grind so researchers can stay on the questions that matter.
+- **One scientific specification for your project.** `astra.yaml` is the single source of truth. Every input, output, recipe, and decision lives there.
+- **Decisions and alternatives.** Every meaningful methodological choice is a named decision with options, a default, a rationale, and (where possible) literature evidence behind it.
+- **Provenance you can prove.** Every output is committed together with a content-addressed manifest and a re-runnable run record. Tampering and drift are detectable, not hopeful.
+- **Agents do the typing, you do the science.** The agent handles the implementation grind; you make the scientific choices.
 
-## Contributing
+## Community
 
-- **Found a bug?** – two ways to report
-  - Write an issue report using our provided templates.
-  - Inside any Claude Code session, run `/lc-feedback <what went wrong>` and we get a clean issue with the context auto-attached.
-- **Looking for the deeper docs?** Maintainer documentation lives inside the [main docs](https://docs.lightconeresearch.org) or in (`docs/`).
-- **Want to contribute?**  
-    We welcome contributions across the stack — schema design, the agent surface, the execution engine, the docs, the rough edges you hit when you try to use any of this for real work. Each repo has a `docs/contributing/` directory with development setup and conventions. Smaller fixes are welcome as PRs without prior discussion; for larger changes, opening an issue first is appreciated.
+- **Questions, ideas, or want to try the stack on your own research?** Come talk to us on **[Discord](https://discord.gg/EbG6JKuyAx)**.
+- **Found a bug?** Two ways to report it:
+  - Open an issue using our templates.
+  - From your agent session, install the [Lightcone Feedback](https://github.com/LightconeResearch/feedback) plugin and ask: *"Use Lightcone Feedback to report this: …"*. It drafts the issue for your approval and routes it to the right repository.
+- **Looking for the deeper docs?** Everything is on [docs.lightconeresearch.org](https://docs.lightconeresearch.org).
+- **Want to contribute?** We welcome contributions across the stack: schema design, the agent surface, the execution engine, the docs, and the rough edges you hit when you use any of this for real work. Check a repository's `CONTRIBUTING.md`, where it has one, for development setup and conventions. Smaller fixes are welcome as PRs without prior discussion; for larger changes, opening an issue first is appreciated.
 
 ## License
 
