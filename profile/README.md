@@ -20,21 +20,14 @@
 
 ## Quick start
 
-Install [`uv`](https://docs.astral.sh/uv/getting-started/installation/), then add the Lightcone plugin to your coding agent. The plugin installs the Lightcone CLI it needs on first use.
+1. Install [`uv`](https://docs.astral.sh/uv/getting-started/installation/), version **0.12 or later** (check with `uv --version`).
+2. Point your favorite coding agent (Claude Code, Codex, …) at our skills repository and let it install the skills and plugins itself:
 
-**Claude Code**
+   ```text
+   Install the Lightcone skills and plugins from https://github.com/LightconeResearch/agent-skills
+   ```
 
-```bash
-claude plugin marketplace add LightconeResearch/agent-skills
-claude plugin install lightcone@lightcone-research
-```
-
-**Codex**
-
-```bash
-codex plugin marketplace add LightconeResearch/agent-skills
-codex plugin add lightcone@lightcone-research
-```
+   The Lightcone plugin then installs the Lightcone CLI it needs on first use.
 
 Then start your agent in an empty directory and give it your research question:
 
