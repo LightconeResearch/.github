@@ -50,7 +50,7 @@ The words "new analysis" are enough for your agent to pick up the Lightcone skil
 
 ## Our projects
 
-All projects are in early alpha: expect breaking changes, and please tell us what breaks.
+These projects are in early alpha and evolve quickly: interfaces may change between releases. Bug reports and feedback are very welcome.
 
 | | Project | What it does |
 |---|---|---|
