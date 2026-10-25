@@ -45,16 +45,13 @@ We build open tools that make those choices explicit and keep the record for you
 
    For the desktop apps, see the [agent-skills instructions](https://github.com/LightconeResearch/agent-skills#-add-the-marketplace).
 
-> [!WARNING]
-> You may need to enable the plugin and reload it (`/reload-plugins` in Claude Code), or restart your agent, before the skill is available.
-
 Then start your agent in an empty directory and give it your research question:
 
 ```text
 I want to start a new Lightcone analysis: <your research question>
 ```
 
-The words "new analysis" are enough for your agent to pick up the Lightcone skill. It works through the plan with you, records every decision in an `astra.yaml`, then runs the analysis with full provenance.
+The words "new Lightcone analysis" are enough for your agent to pick up the Lightcone plugin. It works through the plan with you, records every decision in an `astra.yaml`, then runs the analysis with full provenance.
 
 👉 **[Follow the full quick start](https://docs.lightconeresearch.org/quickstart)** for the next steps.
 
@@ -70,8 +67,8 @@ These projects are in early alpha and evolve quickly: interfaces may change betw
 
 ## Some core ideas
 
-- **One spec, one truth.** `astra.yaml` is the single source of truth. Every input, output, recipe, and decision lives there.
-- **Decisions, not defaults.** Every meaningful methodological choice is a named decision with options, a default, a rationale, and (where possible) literature evidence behind it.
+- **One scientific specification for your project.** `astra.yaml` is the single source of truth. Every input, output, recipe, and decision lives there.
+- **Decisions and alternatives.** Every meaningful methodological choice is a named decision with options, a default, a rationale, and (where possible) literature evidence behind it.
 - **Provenance you can prove.** Every output is committed together with a content-addressed manifest and a re-runnable run record. Tampering and drift are detectable, not hopeful.
 - **Agents do the typing, you do the science.** The agent handles the implementation grind; you make the scientific choices.
 
