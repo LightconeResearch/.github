@@ -46,7 +46,7 @@ I want to start a new Lightcone analysis: <your research question>
 
 The words "new analysis" are enough for your agent to pick up the Lightcone skill. It works through the plan with you, records every decision in an `astra.yaml`, then runs the analysis with full provenance.
 
-👉 **[Follow the full quick start](https://docs.lightconeresearch.org/quickstart)** for the next steps, including exploring your project in JupyterLab.
+👉 **[Follow the full quick start](https://docs.lightconeresearch.org/quickstart)** for the next steps.
 
 ## Our projects
 
@@ -56,9 +56,7 @@ These projects are in early alpha and evolve quickly: interfaces may change betw
 |---|---|---|
 | **Specification** | [astra-spec](https://github.com/LightconeResearch/astra-spec), [astra-tools](https://github.com/LightconeResearch/astra-tools) | ASTRA (*Agentic Schema for Transparent Research Analysis*), a declarative YAML format for an analysis's inputs, outputs, decisions and evidence, plus the `astra` CLI to validate it. Docs at [astra-spec.org](https://astra-spec.org). |
 | **Workflow** | [lightcone-cli](https://github.com/LightconeResearch/lightcone-cli) | The `lc` execution layer: turns an `astra.yaml` into results across every universe of decisions, in locked environments, locally or on Slurm, with a provenance record for every output. |
-| **Agentic** | [agent-skills](https://github.com/LightconeResearch/agent-skills), [feedback](https://github.com/LightconeResearch/feedback) | Plugins that teach Claude Code, Codex and other agents the Lightcone stack, following the open [Agent Skills](https://agentskills.io) standard, plus a feedback plugin that turns bug reports and suggestions from your agent session into issues on the right repository. |
-| **Interface** | [Lightcone Lab](https://github.com/LightconeResearch/jupyterlab-lightcone) | An AI-assisted research workbench for JupyterLab: explore your analysis, trace every result back to the run that made it, and work alongside your agent. |
-| **Publication** | [MySTRA](https://github.com/LightconeResearch/MySTRA) | Write papers and reports on top of ASTRA analyses in plain [MyST](https://mystmd.org/) Markdown, with decisions, figures and numbers pulled in by reference. |
+| **Agentic** | [agent-skills](https://github.com/LightconeResearch/agent-skills) | Plugins that teach Claude Code, Codex and other agents the Lightcone stack, following the open [Agent Skills](https://agentskills.io) standard. |
 
 ## Some core ideas
 
