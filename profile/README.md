@@ -26,7 +26,7 @@ We build open tools that make those choices explicit and keep the record for you
 
 ## Quick start
 
-1. Install [`uv`](https://docs.astral.sh/uv/getting-started/installation/), version **0.12 or later** (check with `uv --version`).
+1. Install [`uv`](https://docs.astral.sh/uv/getting-started/installation/), version **0.7 or later** (check with `uv --version`).
 2. Add the Lightcone plugin to your coding agent. It installs the Lightcone CLI it needs on first use.
 
    **Claude Code**
